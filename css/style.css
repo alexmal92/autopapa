@@ -1,0 +1,24 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  height: 80px;
+  background: #6A42FF;
+}
+
+header .logo svg {
+  height: 50px;
+}
+/*# sourceMappingURL=style.css.map */
