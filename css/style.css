@@ -1,11 +1,49 @@
+@font-face {
+  font-family: 'OpenSans-Light';
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+}
+
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
 }
 
 body {
+  background-color: #90e7f7;
   margin: 0;
   padding: 0;
+  font-family: 'OpenSans-Regular', sans-serif;
 }
 
 .container {
@@ -15,10 +53,106 @@ body {
 
 header {
   height: 80px;
-  background: #6A42FF;
+  background: #6941fd;
 }
 
-header .logo svg {
+header .header__inner {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  text-transform: uppercase;
+}
+
+header .header__inner .logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .header__inner .logo svg {
   height: 50px;
+}
+
+header .header__inner .logo .st0 {
+  fill: #ffffff;
+}
+
+header .header__inner .logo .st1 {
+  fill: #6941fd;
+}
+
+header .header__inner .lvl1 {
+  display: flex;
+  cursor: pointer;
+}
+
+header .header__inner .lvl1 .nav-link {
+  display: inline-block;
+  line-height: 80px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  transition: all .2s ease;
+}
+
+header .header__inner .lvl1 .nav-link .lvl2 {
+  display: flex;
+  flex-direction: column;
+}
+
+header .header__inner .lvl1 .nav-link .menuBurger {
+  padding: 10px;
+  display: inline-block;
+  line-height: 80px;
+}
+
+header .header__inner .lvl1 .nav-link .menuBurger svg {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  fill: #ffffff;
+}
+
+header .header__inner .lvl1 .nav-link:hover {
+  background-color: #ffffff;
+  color: #6941fd;
+}
+
+header .header__inner .lvl1 .nav-link:hover .menuBurger svg {
+  fill: #6941fd;
+}
+
+header .header__inner .phone {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header .header__inner .phone .phoneNum {
+  line-height: 80px;
+  position: relative;
+  cursor: pointer;
+}
+
+header .header__inner .phone .phoneNum::before {
+  position: absolute;
+  content: '';
+  width: 35px;
+  height: 35px;
+  top: 23px;
+  left: -42px;
+  background: url("../img/phone.svg") no-repeat;
+}
+
+.filters {
+  width: 100%;
+  height: 234px;
+  background: #f5f5f5;
 }
 /*# sourceMappingURL=style.css.map */
