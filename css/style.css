@@ -1,3 +1,24 @@
+@keyframes colorfull {
+  0% {
+    fill: #ff1100;
+  }
+  20% {
+    fill: #ff9900;
+  }
+  40% {
+    fill: #0099ff;
+  }
+  60% {
+    fill: #00b118;
+  }
+  80% {
+    fill: #ae00ff;
+  }
+  100% {
+    fill: #ff00aa;
+  }
+}
+
 @font-face {
   font-family: 'OpenSans-Light';
   font-weight: 300;
@@ -81,6 +102,10 @@ header .header__inner {
 
 .logo .st1 {
   fill: #a58efa;
+}
+
+.logo .st2 {
+  animation: colorfull 10s ease infinite;
 }
 
 .menu {
@@ -211,7 +236,12 @@ header .header__inner {
 
 .filters-grid-row {
   display: grid;
+  justify-items: center;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.filter__item {
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAOA,UAAU,CAAV,SAAU;EACR,EAAE;IACA,IAAI,EAAE,OAAO;;EACf,GAAG;IACD,IAAI,EAAE,OAAO;;EACf,GAAG;IACD,IAAI,EAAE,OAAO;;EACf,GAAG;IACD,IAAI,EAAE,OAAO;;EACf,GAAG;IACD,IAAI,EAAE,OAAO;;EACf,IAAI;IACF,IAAI,EAAE,OAAO",
     "sources": [
         "../sass/colors.sass"
     ],
