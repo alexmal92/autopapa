@@ -1,6 +1,17 @@
 @import colors
 @import fonts
 
+//svg setings
+
+.st0
+  fill: $white
+.st1
+  fill: $colorMain
+.st2
+  animation: colorfull 10s ease infinite
+.st4
+  fill: $grey
+
 *
   box-sizing: border-box
 
@@ -22,6 +33,10 @@ body
   max-width: 1200px
   margin: 0 auto
 
+
+// Header
+
+
 header
   height: 80px
   background: $colorMain
@@ -38,12 +53,6 @@ header
   cursor: pointer
   svg
     height: 50px
-  .st0
-    fill: $white
-  .st1
-    fill: $colorMain
-  .st2
-    animation: colorfull 10s ease infinite
 
 .menu
   display: flex
@@ -74,7 +83,6 @@ header
       visibility: visible
       transition: all .3s
 
-
 .submenu
   position: absolute
   padding: 10px
@@ -85,15 +93,15 @@ header
     &-link
       display: inline-block
       padding: 0 10px
-
       font-size: 14px
       line-height: 30px
       text-decoration: none
-      color: $black
+      color: $greyDark
+
       &:hover
         background-color: $grey
         border-radius: 10px
-      
+
 .menu-button
   padding: 30px 15px
   cursor: pointer
@@ -110,11 +118,11 @@ header
 	text-align: start
 	right: 0px
 	top: 80px
-  
+  color: $greyDark
+
 .menu__burger__item-link
   font-family: 'OpenSans-Regular', sans-serif
   font-size: 14px
-
 
 .menu__burger-title
   padding: 10px 15px
@@ -141,9 +149,14 @@ header
     left: -42px;
     background: url('../img/phone.svg') no-repeat
 
+
+// Filters
+
+
 .filters
   width: 100%
-  background: $grey
+  background: $greyLight
+
 
 .filters-grid-row
   display: grid
@@ -151,8 +164,54 @@ header
   grid-template-rows: 1fr 1fr
   grid-template-columns: 1fr 1fr 1fr 1fr
   
-.filter__item
+
+.filter-checkboxes
   display: flex
+  justify-content: center
+  align-items: center
+  
+.filter-checkbox
+  margin: 20px 10px
+  display: flex
+  justify-content: space-around
+  cursor: pointer
 
+  background-color: $white
+  border: 1px solid $grey
+  border-radius: 1.5em
+  line-height: 2em
+  transition: all .3s
+  &__title
+    margin-left: 0.7em
+    user-select: none
+    white-space: nowrap
+    font-family: 'OpenSans-Regular', sans-serif
+    font-size: 14px
+    color: $greyBlack
+    transition: all .3s
+  &__svg-right
+    margin-left: 0.7em
+  &__svg
+    margin: 0 0.7em 0 0.7em
+  &__input
+    margin: 0
+    appearance: none
+  &:hover
+    border: 1px solid $greyBlack
 
-
+.checkboxChecked
+  border: 1px solid $colorMain
+  background-color: $colorMain
+  &:hover
+    border: 1px solid $colorMain
+    background-color: $colorSec
+    box-shadow: 0 5px 10px 0 rgba($colorMain, 0.7)
+    
+  &-title
+    color: $white
+  &-svg-right .st1
+    fill: $white
+  &-svg-right .st0
+    fill: $colorMain
+  &-svg .st4
+    fill: $white

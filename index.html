@@ -15,8 +15,8 @@
 
           <div class="logo">
 
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              viewBox="0 0 231.9 49.7" style="enable-background:new 0 0 231.9 49.7;" xml:space="preserve">
+            <svg x="0px" y="0px"
+              viewBox="0 0 232 50" xml:space="preserve">
               <path class="st2" d="M78.8,7.2c-4.9,4.8-7.4,10.6-7.4,17.4c0,6.9,2.5,12.8,7.4,17.7c4.6,4.7,10.2,7.1,16.6,7.4h2.3
                 c6.3-0.3,11.7-2.6,16.2-7.1c4.8-4.8,7.1-10.6,7.1-17.4c0-6.9-2.4-12.8-7.1-17.7S103.4,0,96.6,0C89.7,0,83.8,2.4,78.8,7.2z"/>
               <path class="st2" d="M22,12.2v3.7c-0.1-0.1-0.1-0.2-0.2-0.2c-2.4-2.6-5.4-3.9-8.9-3.9s-6.6,1.3-9.1,3.8S0,21.1,0,24.7
@@ -125,27 +125,61 @@
     <section class="filters">
       <div class="container">
         <div class="filters-grid-row">
-          <input class="filter__item" type="text"  placeholder="Все марки">
-          <input class="filter__item" type="text"  placeholder="Все модели">
+          <input class="filter__item" type="text" placeholder="Все марки">
+          <input class="filter__item" type="text" placeholder="Все модели">
           <div class="filter__item">
             <input class="half-filter__item" type="number" placeholder="Цена от">
             <input class="half-filter__item" type="number" placeholder="до">
           </div>
-          <input class="filter__item" type="text"  placeholder="Все города">
+          <input class="filter__item" type="text" placeholder="Все города">
           <div class="filter__item">
-            <input class="half-filter__item" type="number"  placeholder="Год от">
-            <input class="half-filter__item" type="number"  placeholder="до">
+            <input class="half-filter__item" type="number" placeholder="Год от">
+            <input class="half-filter__item" type="number" placeholder="до">
           </div>
-          <input class="filter__item" type="text"  placeholder="Кузов">
-          <input class="filter__item" type="text"  placeholder="КПП">
-          <input class="filter__item" type="text"  placeholder="Двигатель">
+          <input class="filter__item" type="text" placeholder="Кузов">
+          <input class="filter__item" type="text" placeholder="КПП">
+          <input class="filter__item" type="text" placeholder="Двигатель">
         </div>
-        <div class="filter-checkbox">
-          <input type="checkbox" class="filter-checkbox__item">
-          <input type="checkbox" class="filter-checkbox__item">
-          <input type="checkbox" class="filter-checkbox__item">
-          <input type="checkbox" class="filter-checkbox__item">
-          <input type="checkbox" class="filter-checkbox__item">
+        <div class="filter-checkboxes">
+          <label class="filter-checkbox" name="garant">
+            <input type="checkbox" class="filter-checkbox__input" name="garant">
+            <svg class="filter-checkbox__svg-right" name="garant" width="20" heigth="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path class="st1" d="M2 2.945v7.522c0 2.287 1.527 4.597 4.106 6.781a25.143 25.143 0 0 0 3.865 2.68c.171.096-.113.096.057 0 .288-.162.61-.352.957-.569a25.136 25.136 0 0 0 2.909-2.11C16.473 15.063 18 12.753 18 10.466v-2.86-4.66s-.486-.002-1.2-.07a14.567 14.567 0 0 1-3.111-.624l-.107-.036A11.312 11.312 0 0 1 11.48 1.16C10.97.838 10.496.494 10.07.15c-.258-.209.07-.194-.204.009-.454.334-.954.669-1.487.981-.778.457-1.56.828-2.309 1.077-.28.104-.574.195-.878.276-.784.208-1.615.337-2.454.404-.554.044-.738.048-.738.048z"/>
+              <path class="st0" d="M9.226 10.7l4.598-4.11.684.719-5.23 4.676L6.09 9.619l.624-.783L9.226 10.7z"/>
+            </svg>
+            <span class="filter-checkbox__title" name="garant">Гарантия</span>
+            <svg class="filter-checkbox__svg" name="garant" width="14" heigth="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+              <path class="st4" name="garant" d="M7 2.8a2.8 2.8 0 0 0-2.8 2.8h1.4c0-.77.63-1.4 1.4-1.4.77 0 1.4.63 1.4 1.4 0 1.4-2.1 1.225-2.1 3.5h1.4c0-1.575 2.1-1.75 2.1-3.5A2.8 2.8 0 0 0 7 2.8zm.05 10c-3.17 0-5.75-2.58-5.75-5.75S3.88 1.3 7.05 1.3s5.75 2.58 5.75 5.75-2.58 5.75-5.75 5.75zM7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm-.7 11.2h1.4V9.8H6.3v1.4z"/>
+            </svg>
+          </label>
+          <label class="filter-checkbox" name="weekoffer">
+            <input type="checkbox" class="filter-checkbox__input" name="weekoffer">
+            <span class="filter-checkbox__title" name="weekoffer">Предложения недели</span>
+            <svg class="filter-checkbox__svg" name="weekoffer" width="14" heigth="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+              <path class="st4" name="weekoffer" d="M7 2.8a2.8 2.8 0 0 0-2.8 2.8h1.4c0-.77.63-1.4 1.4-1.4.77 0 1.4.63 1.4 1.4 0 1.4-2.1 1.225-2.1 3.5h1.4c0-1.575 2.1-1.75 2.1-3.5A2.8 2.8 0 0 0 7 2.8zm.05 10c-3.17 0-5.75-2.58-5.75-5.75S3.88 1.3 7.05 1.3s5.75 2.58 5.75 5.75-2.58 5.75-5.75 5.75zM7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm-.7 11.2h1.4V9.8H6.3v1.4z"/>
+            </svg>
+          </label>
+          <label class="filter-checkbox" name="bestprice">
+            <input type="checkbox" class="filter-checkbox__input" name="bestprice">
+            <span class="filter-checkbox__title" name="bestprice">Лучшая цена на рынке</span>
+            <svg class="filter-checkbox__svg" name="bestprice" width="14" heigth="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+              <path class="st4" name="bestprice" d="M7 2.8a2.8 2.8 0 0 0-2.8 2.8h1.4c0-.77.63-1.4 1.4-1.4.77 0 1.4.63 1.4 1.4 0 1.4-2.1 1.225-2.1 3.5h1.4c0-1.575 2.1-1.75 2.1-3.5A2.8 2.8 0 0 0 7 2.8zm.05 10c-3.17 0-5.75-2.58-5.75-5.75S3.88 1.3 7.05 1.3s5.75 2.58 5.75 5.75-2.58 5.75-5.75 5.75zM7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm-.7 11.2h1.4V9.8H6.3v1.4z"/>
+            </svg>
+          </label>
+          <label class="filter-checkbox" name="ideal">
+            <input type="checkbox" class="filter-checkbox__input" name="ideal">
+            <span class="filter-checkbox__title" name="ideal">Идеальное состояние</span>
+            <svg class="filter-checkbox__svg" name="ideal" width="14" heigth="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+              <path class="st4" name="ideal" d="M7 2.8a2.8 2.8 0 0 0-2.8 2.8h1.4c0-.77.63-1.4 1.4-1.4.77 0 1.4.63 1.4 1.4 0 1.4-2.1 1.225-2.1 3.5h1.4c0-1.575 2.1-1.75 2.1-3.5A2.8 2.8 0 0 0 7 2.8zm.05 10c-3.17 0-5.75-2.58-5.75-5.75S3.88 1.3 7.05 1.3s5.75 2.58 5.75 5.75-2.58 5.75-5.75 5.75zM7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm-.7 11.2h1.4V9.8H6.3v1.4z"/>
+            </svg>
+          </label>
+          <label class="filter-checkbox" name="cashback">
+            <input type="checkbox" class="filter-checkbox__input" name="cashback">
+            <span class="filter-checkbox__title" name="cashback">Cashback</span>
+            <svg class="filter-checkbox__svg" name="cashback" width="14" heigth="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+              <path class="st4" name="cashback" d="M7 2.8a2.8 2.8 0 0 0-2.8 2.8h1.4c0-.77.63-1.4 1.4-1.4.77 0 1.4.63 1.4 1.4 0 1.4-2.1 1.225-2.1 3.5h1.4c0-1.575 2.1-1.75 2.1-3.5A2.8 2.8 0 0 0 7 2.8zm.05 10c-3.17 0-5.75-2.58-5.75-5.75S3.88 1.3 7.05 1.3s5.75 2.58 5.75 5.75-2.58 5.75-5.75 5.75zM7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm-.7 11.2h1.4V9.8H6.3v1.4z"/>
+            </svg>
+          </label>
         </div>
       </div>
     </section>

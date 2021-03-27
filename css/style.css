@@ -47,6 +47,22 @@
   src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
 }
 
+.st0 {
+  fill: #ffffff;
+}
+
+.st1 {
+  fill: #a58efa;
+}
+
+.st2 {
+  animation: colorfull 10s ease infinite;
+}
+
+.st4 {
+  fill: #cecece;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -94,18 +110,6 @@ header .header__inner {
 
 .logo svg {
   height: 50px;
-}
-
-.logo .st0 {
-  fill: #ffffff;
-}
-
-.logo .st1 {
-  fill: #a58efa;
-}
-
-.logo .st2 {
-  animation: colorfull 10s ease infinite;
 }
 
 .menu {
@@ -164,11 +168,11 @@ header .header__inner {
   font-size: 14px;
   line-height: 30px;
   text-decoration: none;
-  color: #000000;
+  color: #2c2c2c;
 }
 
 .submenu__item-link:hover {
-  background-color: #e2e2e2;
+  background-color: #cecece;
   border-radius: 10px;
 }
 
@@ -193,6 +197,7 @@ header .header__inner {
   text-align: start;
   right: 0px;
   top: 80px;
+  top-color: #2c2c2c;
 }
 
 .menu__burger__item-link {
@@ -231,7 +236,7 @@ header .header__inner {
 
 .filters {
   width: 100%;
-  background: #e2e2e2;
+  background: #e6e6e6;
 }
 
 .filters-grid-row {
@@ -241,7 +246,75 @@ header .header__inner {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.filter__item {
+.filter-checkboxes {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-checkbox {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #cecece;
+  border-radius: 1.5em;
+  line-height: 2em;
+  transition: all .3s;
+}
+
+.filter-checkbox__title {
+  margin-left: 0.7em;
+  user-select: none;
+  white-space: nowrap;
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-size: 14px;
+  color: #9c9c9c;
+  transition: all .3s;
+}
+
+.filter-checkbox__svg-right {
+  margin-left: 0.7em;
+}
+
+.filter-checkbox__svg {
+  margin: 0 0.7em 0 0.7em;
+}
+
+.filter-checkbox__input {
+  margin: 0;
+  appearance: none;
+}
+
+.filter-checkbox:hover {
+  border: 1px solid #9c9c9c;
+}
+
+.checkboxChecked {
+  border: 1px solid #a58efa;
+  background-color: #a58efa;
+}
+
+.checkboxChecked:hover {
+  border: 1px solid #a58efa;
+  background-color: #9679ff;
+  box-shadow: 0 5px 10px 0 rgba(165, 142, 250, 0.7);
+}
+
+.checkboxChecked-title {
+  color: #ffffff;
+}
+
+.checkboxChecked-svg-right .st1 {
+  fill: #ffffff;
+}
+
+.checkboxChecked-svg-right .st0 {
+  fill: #a58efa;
+}
+
+.checkboxChecked-svg .st4 {
+  fill: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
