@@ -56,7 +56,7 @@ header
 
 .menu
   display: flex
-  transition: all .3s
+  transition: all .2s
   justify-content: center
   &__item
     height: 80px
@@ -73,7 +73,7 @@ header
           
   &__item:hover
     background-color: $white
-    transition: all .3s
+    transition: all .2s
     .menu__item-link
       color: $colorMain
     .menu-button-img rect
@@ -81,7 +81,7 @@ header
     .submenu
       background-color: $white
       visibility: visible
-      transition: all .3s
+      transition: all .2s
 
 .submenu
   position: absolute
@@ -118,11 +118,12 @@ header
 	text-align: start
 	right: 0px
 	top: 80px
-  color: $greyDark
+  
 
 .menu__burger__item-link
   font-family: 'OpenSans-Regular', sans-serif
   font-size: 14px
+  color: $greyDark
 
 .menu__burger-title
   padding: 10px 15px
@@ -153,16 +154,19 @@ header
 // Filters
 
 
-.filters
+.filter
   width: 100%
   background: $greyLight
 
+.filters
 
-.filters-grid-row
+.top-filter
   display: grid
-  justify-items: center
-  grid-template-rows: 1fr 1fr
   grid-template-columns: 1fr 1fr 1fr 1fr
+
+.bot-filter
+
+
   
 
 .filter-checkboxes
@@ -180,7 +184,7 @@ header
   border: 1px solid $grey
   border-radius: 1.5em
   line-height: 2em
-  transition: all .3s
+  transition: all .2s
   &__title
     margin-left: 0.7em
     user-select: none
@@ -188,30 +192,35 @@ header
     font-family: 'OpenSans-Regular', sans-serif
     font-size: 14px
     color: $greyBlack
-    transition: all .3s
+    transition: all .2s
   &__svg-right
     margin-left: 0.7em
   &__svg
     margin: 0 0.7em 0 0.7em
-  &__input
-    margin: 0
-    appearance: none
   &:hover
     border: 1px solid $greyBlack
 
-.checkboxChecked
-  border: 1px solid $colorMain
-  background-color: $colorMain
-  &:hover
+.custom-check
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  &:focus + .filter-checkbox
+    border: 1px solid $greyDark
+    box-shadow: 0 5px 10px 0 rgba($greyBlack, 0.7)
+  &:checked + .filter-checkbox
     border: 1px solid $colorMain
-    background-color: $colorSec
-    box-shadow: 0 5px 10px 0 rgba($colorMain, 0.7)
+    background-color: $colorMain
+    &:hover
+      border: 1px solid $colorMain
+      background-color: $colorSec
+      box-shadow: 0 5px 10px 0 rgba($colorMain, 0.7)
+    .filter-checkbox__title
+      color: $white
+    .filter-checkbox__svg-right .st1
+      fill: $white
+    .filter-checkbox__svg-right .st0
+      fill: $colorMain
+    .filter-checkbox__svg .st4
+      fill: $white
+  
     
-  &-title
-    color: $white
-  &-svg-right .st1
-    fill: $white
-  &-svg-right .st0
-    fill: $colorMain
-  &-svg .st4
-    fill: $white

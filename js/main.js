@@ -1,66 +1,125 @@
-
 //filters
 
-let filterInputs = document.getElementsByClassName('filter-checkbox__input');
-let filterChecks = document.getElementsByClassName('filter-checkbox');
-let filterSvgRights = document.getElementsByClassName('filter-checkbox__svg-right');
-let filterTitles = document.getElementsByClassName('filter-checkbox__title');
-let filterSvgs = document.getElementsByClassName('filter-checkbox__svg');
+document.querySelectorAll('.custom-check').forEach((elem)=> {
+  elem.onclick = checkFunction
+});
+function checkFunction () {
 
-for (let i = 0; i < filterInputs.length; i++) {
-  const filterInput = filterInputs[i];
-  const filterCheck = filterChecks[i];
-  const filterSvgRight = filterSvgRights[i];
-  const filterTitle = filterTitles[i];
-  const filterSvg = filterSvgs[i];
+  let offerCheck = document.querySelector('.custom-check[id="weekoffer"]');
+  let priceCheck = document.querySelector('.custom-check[id="bestprice"]');
+  let idealCheck = document.querySelector('.custom-check[id="ideal"]');
 
-  filterInput.addEventListener('click', function () {
-    
-    for (let i = 0; i < filterChecks.length; i++) {
-      filterCheck.classList.toggle("checkboxChecked");
-    }
+  if (this.id == 'weekoffer') {
+    priceCheck.checked = false;
+    idealCheck.checked = false;
+  }
 
-    for (let i = 0; i < filterTitles.length; i++) {
-      filterTitle.classList.toggle("checkboxChecked-title");
-    }
-    for (let i = 0; i < filterSvgs.length; i++) {
-      filterSvg.classList.toggle("checkboxChecked-svg");
-    }
-    for (let i = 0; i < filterSvgRights.length; i++) {
-      filterSvgRight.classList.toggle("checkboxChecked-svg-right");
-    }
+  if (this.id == 'bestprice') {
+    offerCheck.checked = false;
+    idealCheck.checked = false;
+  }
 
-    
-  });
+  if (this.id == 'ideal') {
+    priceCheck.checked = false;
+    offerCheck.checked = false;
+  }
 }
 
+// const filterChecks = document.getElementsByClassName('filter-checkbox');
 
+// for (let i = 0; i < filterChecks.length; i++) {
+//   const filterCheck = filterChecks[i];
 
-//   filterInput.addEventListener('click', function () {
-//     let fIndex = filterInputs.indexOf(target);
-//     console.log(fIndex);
-//   })
+//   filterCheck.addEventListener('click', function () {
+
+//     const filterInputs = document.getElementsByClassName('filter-checkbox__input');
+  
+//     const filterInput = filterInputs[i];
+    
+//     for (let i = 0; i < filterInputs.length; i++) {
+//       if (filterInput.checked) {
+//         filterCheck.classList.add("checkboxChecked");
+//       }
+//       else {
+//         filterCheck.classList.remove("checkboxChecked");
+//       }
+//     }
+
+//   });
 // }
 
 
 
+
+
+
+
+// document.querySelectorAll('.filter-checkbox').forEach((checkFilter)=> {
+//   checkFilter.onclick = checkFilterFunction
+// });
+
+
+
+
+
+
+
+// let filterInputs = document.getElementsByClassName('filter-checkbox__input');
 
 // for (let i = 0; i < filterInputs.length; i++) {
-//   let filterInput = filterInputs[i];
-//   filterInput.addEventListener('focus', checkbox);
+//   const filterInput = filterInputs[i];
+
+//   filterInput.addEventListener('click', inputClick) 
+//   filterInput.addEventListener('keydown', inputClick)
+//   function inputClick () {
+//     let filterChecks = document.getElementsByClassName('filter-checkbox');
+//     let filterSvgRights = document.getElementsByClassName('filter-checkbox__svg-right');
+//     let filterTitles = document.getElementsByClassName('filter-checkbox__title');
+//     let filterSvgs = document.getElementsByClassName('filter-checkbox__svg');
+
+//     let inputBestprise = document.querySelector('.filter-checkbox__input[name="bestprice"]');
+
+//     const filterCheck = filterChecks[i];
+//     const filterSvgRight = filterSvgRights[i];
+//     const filterTitle = filterTitles[i];
+//     const filterSvg = filterSvgs[i];
+    
+//     for (let i = 0; i < filterChecks.length; i++) {
+//       if (filterInput.checked) {
+//         filterCheck.classList.add("checkboxChecked");
+//       }
+//       else {
+//         filterCheck.classList.remove("checkboxChecked");
+//       }
+//     } 
+    
+//     for (let i = 0; i < filterTitles.length; i++) {
+//       if (filterInput.checked) {
+//         filterTitle.classList.add("checkboxChecked-title");
+
+//       }
+//       else {
+//         filterTitle.classList.remove("checkboxChecked-title");
+//       }
+//     }
+
+//     for (let i = 0; i < filterSvgs.length; i++) {
+//       if (filterInput.checked) {
+//         filterSvg.classList.add("checkboxChecked-svg");
+//       }
+//       else {
+//         filterSvg.classList.remove("checkboxChecked-svg");
+//       }
+//     }
+
+//     for (let i = 0; i < filterSvgRights.length; i++) {
+//       if (filterInput.checked) {
+//         filterSvgRight.classList.add("checkboxChecked-svg-right");
+//       }
+//       else {
+//         filterSvgRight.classList.remove("checkboxChecked-svg-right");
+//       }
+//     }
+   
+//   };
 // }
-
-// function checkbox () {
-//   let filterCheck = document.querySelector(".filter-checkbox");
-//   let filterSvgRight = document.querySelector(".filter-checkbox__svg-right");
-//   let filterTitle = document.querySelector(".filter-checkbox__title");
-//   let filterSvg = document.querySelector(".filter-checkbox__svg");
-
-//   console.log(filterCheck);
-
-//   filterCheck.classList.toggle("checkboxChecked");
-//   filterSvgRight.classList.toggle("checkboxChecked-svg-right");
-//   filterTitle.classList.toggle("checkboxChecked-title");
-//   filterSvg.classList.toggle("checkboxChecked-svg");
-// };
-
