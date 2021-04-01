@@ -1,7 +1,7 @@
 @import colors
 @import fonts
 
-//svg setings
+//svg logo setings
 
 .st0
   fill: $white
@@ -15,20 +15,26 @@
 *
   box-sizing: border-box
 
-nav ul,
-nav ol
+ul,
+ol
   margin: 0
   padding: 0
 
-.menu li
+li
   list-style-type: none
   
 body
-  background-color: #90e7f7
   margin: 0
   padding: 0
   font-family: 'OpenSans-Regular', sans-serif
 
+h1
+  font-size: 36px
+  font-family: 'OpenSans-Light'
+  letter-spacing: 0.05em
+  
+a
+  text-decoration: none
 .container
   max-width: 1200px
   margin: 0 auto
@@ -88,6 +94,8 @@ header
   padding: 10px
   visibility: hidden
   list-style: none
+  border: solid 1px darken($grey, 30)
+  border-top: none
   &__item
     white-space: nowrap
     &-link
@@ -96,7 +104,7 @@ header
       font-size: 14px
       line-height: 30px
       text-decoration: none
-      color: $greyDark
+      color: $textGrey
 
       &:hover
         background-color: $grey
@@ -123,7 +131,7 @@ header
 .menu__burger__item-link
   font-family: 'OpenSans-Regular', sans-serif
   font-size: 14px
-  color: $greyDark
+  color: $textGrey
 
 .menu__burger-title
   padding: 10px 15px
@@ -156,7 +164,7 @@ header
 
 .filter
   width: 100%
-  background: $greyLight
+  background: $sectionGrey
 
 .filters
 
@@ -191,22 +199,22 @@ header
     white-space: nowrap
     font-family: 'OpenSans-Regular', sans-serif
     font-size: 14px
-    color: $greyBlack
+    color: $textGrey
     transition: all .2s
   &__svg-right
     margin-left: 0.7em
   &__svg
     margin: 0 0.7em 0 0.7em
   &:hover
-    border: 1px solid $greyBlack
+    border: 1px solid #666666
 
 .custom-check
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
   &:focus + .filter-checkbox
-    border: 1px solid $greyDark
-    box-shadow: 0 5px 10px 0 rgba($greyBlack, 0.7)
+    border: 1px solid #666666
+    box-shadow: 0 5px 10px 0 rgba(#666666, 0.7)
   &:checked + .filter-checkbox
     border: 1px solid $colorMain
     background-color: $colorMain
@@ -222,5 +230,134 @@ header
       fill: $colorMain
     .filter-checkbox__svg .st4
       fill: $white
-  
     
+  
+// verified cars
+
+
+.verified
+  background-color: $white
+
+.verified__title
+  padding: 0 10px
+
+.verified__list
+  padding: 0 10px
+  margin-bottom: 40px
+  display: grid
+  grid-template-columns: repeat(8, 1fr)
+  grid-gap: 20px
+.verified__item
+  text-decoration: none
+  white-space: nowrap
+  color: $textGrey
+  &:hover
+    color: $colorMain
+
+
+// footnotes
+
+
+.footnote
+  background-color: $sectionGrey
+  &__item
+    padding-bottom: 20px
+    padding-left: 30px
+    position: relative
+    line-height: 1.7em
+    color: $textGrey
+    &::before
+      content: ""
+      position: absolute
+      padding-left: 20px
+      font-size: 0.9em
+    &:nth-child(1)
+      padding-top: 40px
+      &::before
+        content: "1"
+        top: 35px
+        left: -10px
+    &:nth-child(2)::before
+      content: "2"
+      top: -5px
+      left: -10px
+    &:nth-child(3)::before
+      content: "3"
+      top: -5px
+      left: -10px
+    &:nth-child(4)
+      padding-bottom: 40px
+      &::before
+        content: "4"
+        top: -5px
+        left: -10px
+
+
+
+
+footer
+  background-color: #20374e
+  font-family: 'OpenSans-SemiBold'
+  font-size: 16px
+  color: $textFooter
+  a
+    color: $textFooter
+    line-height: 1.5em
+    transition: .2s
+
+
+.footer__nav
+  padding: 30px 10px
+  &__item
+    & + &
+      padding: 0px 20px
+
+.footer__menu
+  padding: 30px 10px
+  border-top: solid 1px lighten($black, 30)
+  display: grid
+  grid-gap: 30px
+  grid-template-columns: repeat(6, 1fr)
+  grid-template-rows: 2
+  &__item
+    display: flex
+    flex-direction: column
+    &:nth-child(5)
+      grid-column-start: 5
+      grid-column-end: 7
+    &:nth-child(6)
+      grid-column: 1 / 4
+    &:nth-child(7)
+      grid-column: 4 / 7
+    &__title
+      align-self: start
+      color: darken($white, 10)
+      margin-bottom: 20px
+      text-transform: uppercase
+      white-space: nowrap
+      &:hover
+        color: darken($textFooter, 5)
+    &__link
+      align-self: start
+      padding-bottom: 10px
+      &:hover
+        color: darken($textFooter, 15)
+    &:nth-child(-n+4) > &__link
+      white-space: nowrap
+
+#footer__menu__item__link-disbl
+  color: $textFooter
+#footer__menu__item__link-frame
+  padding: 15px
+  border: solid 1px $grey
+  border-radius: .5em
+.footer__social
+  display: flex
+  &__item
+    & + &
+    padding: 10px
+
+
+.footer__disclaimer
+  padding: 30px 10px
+  border-top: solid 1px lighten($black, 30)
