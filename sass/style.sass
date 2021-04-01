@@ -45,7 +45,9 @@ a
 
 header
   height: 80px
+  position: relative
   background: $colorMain
+  z-index: 20
   .header__inner
     width: 100%
     height: 80px
@@ -107,7 +109,7 @@ header
       color: $textGrey
 
       &:hover
-        background-color: $grey
+        background-color: lighten($grey, 10)
         border-radius: 10px
 
 .menu-button
@@ -163,19 +165,57 @@ header
 
 
 .filter
-  width: 100%
-  background: $sectionGrey
+  background-color: $sectionGrey
 
 .filters
+  padding: 40px 10px 0
+  
 
 .top-filter
   display: grid
   grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-gap: 20px
 
 .bot-filter
+  margin-top: 20px
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-gap: 20px
+  
+//hide filters
+
+.hideFilters
+  display: none
+  background-color: $sectionGrey
+  
+.filter__item
+
+
+.filter__buttons
+  padding-bottom: 20px
+  display: flex
+  justify-content: flex-end
+.filter__button
+  border: none
+  background-color: $sectionGrey
+  color: $colorMain
+  outline: none
+  cursor: pointer
+  border-bottom: solid 1px rgba(0,0,0,0)
+  user-select: none
+  &-close
+    margin-right: 10px
+  &:hover
+    border-bottom: solid 1px $colorSec
+    color: $colorSec
+
+#hideFiltersLabel
+  cursor: pointer
 
 
   
+
+// checkbox
 
 .filter-checkboxes
   display: flex
@@ -183,7 +223,7 @@ header
   align-items: center
   
 .filter-checkbox
-  margin: 20px 10px
+  margin: 25px 10px 20px
   display: flex
   justify-content: space-around
   cursor: pointer
@@ -293,7 +333,7 @@ header
         left: -10px
 
 
-
+//footer
 
 footer
   background-color: #20374e
@@ -309,8 +349,9 @@ footer
 .footer__nav
   padding: 30px 10px
   &__item
-    & + &
-      padding: 0px 20px
+    padding: 0px 20px
+  &__item:first-child
+    padding-left: 0
 
 .footer__menu
   padding: 30px 10px

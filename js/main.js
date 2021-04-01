@@ -25,6 +25,14 @@ function checkFunction () {
   }
 }
 
+
+
+document.getElementById('hideFiltersBtn').addEventListener('click', function() {
+  document.getElementById('hideFiltersSvg').style.transform = `rotate(${this.d = (this.d | 0) + 180}deg)`;
+  document.getElementById('hideFilters').classList.toggle('hideFilters');
+});
+
+
 // const filterChecks = document.getElementsByClassName('filter-checkbox');
 
 // for (let i = 0; i < filterChecks.length; i++) {

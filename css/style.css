@@ -100,7 +100,9 @@ a {
 
 header {
   height: 80px;
+  position: relative;
   background: #a58efa;
+  z-index: 20;
 }
 
 header .header__inner {
@@ -183,7 +185,7 @@ header .header__inner {
 }
 
 .submenu__item-link:hover {
-  background-color: #cecece;
+  background-color: #e8e8e8;
   border-radius: 10px;
 }
 
@@ -246,13 +248,58 @@ header .header__inner {
 }
 
 .filter {
-  width: 100%;
-  background: #e9e9e9;
+  background-color: #e9e9e9;
+}
+
+.filters {
+  padding: 40px 10px 0;
 }
 
 .top-filter {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.bot-filter {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.hideFilters {
+  display: none;
+  background-color: #e9e9e9;
+}
+
+.filter__buttons {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter__button {
+  border: none;
+  background-color: #e9e9e9;
+  color: #a58efa;
+  outline: none;
+  cursor: pointer;
+  border-bottom: solid 1px rgba(0, 0, 0, 0);
+  user-select: none;
+}
+
+.filter__button-close {
+  margin-right: 10px;
+}
+
+.filter__button:hover {
+  border-bottom: solid 1px #9276f9;
+  color: #9276f9;
+}
+
+#hideFiltersLabel {
+  cursor: pointer;
 }
 
 .filter-checkboxes {
@@ -262,7 +309,7 @@ header .header__inner {
 }
 
 .filter-checkbox {
-  margin: 20px 10px;
+  margin: 25px 10px 20px;
   display: flex;
   justify-content: space-around;
   cursor: pointer;
@@ -427,8 +474,12 @@ footer a {
   padding: 30px 10px;
 }
 
-.footer__nav__item + .footer__nav__item {
+.footer__nav__item {
   padding: 0px 20px;
+}
+
+.footer__nav__item:first-child {
+  padding-left: 0;
 }
 
 .footer__menu {
