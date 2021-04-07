@@ -1,13 +1,15 @@
 //filters
 
+let garantCheck = document.querySelector('.custom-check[id="garant"]');
+let offerCheck = document.querySelector('.custom-check[id="weekoffer"]');
+let priceCheck = document.querySelector('.custom-check[id="bestprice"]');
+let idealCheck = document.querySelector('.custom-check[id="ideal"]');
+let cashbackCheck = document.querySelector('.custom-check[id="cashback"]');
+
 document.querySelectorAll('.custom-check').forEach((elem)=> {
   elem.onclick = checkFunction
 });
 function checkFunction () {
-
-  let offerCheck = document.querySelector('.custom-check[id="weekoffer"]');
-  let priceCheck = document.querySelector('.custom-check[id="bestprice"]');
-  let idealCheck = document.querySelector('.custom-check[id="ideal"]');
 
   if (this.id == 'weekoffer') {
     priceCheck.checked = false;
@@ -26,6 +28,24 @@ function checkFunction () {
 }
 
 
+
+// clear forms
+
+document.getElementById('clearFiltersBtn').addEventListener('click', function(){
+  let allInputs = document.getElementsByClassName('filterInput');
+  for (let i = 0; i < allInputs.length; i++) {
+    const element = allInputs[i];;
+    element.value = "";
+  }
+
+  garantCheck.checked = false;
+  offerCheck.checked = false; 
+  priceCheck.checked = false;
+  idealCheck.checked = false;
+  cashbackCheck.checked = false; 
+});
+
+// show other filters
 
 document.getElementById('hideFiltersBtn').addEventListener('click', function() {
   document.getElementById('hideFiltersSvg').style.transform = `rotate(${this.d = (this.d | 0) + 180}deg)`;
