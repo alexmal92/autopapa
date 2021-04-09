@@ -1,4 +1,4 @@
-@keyframes colorfull {
+@keyframes colorfull-fill {
   0% {
     fill: #ff1100;
   }
@@ -16,6 +16,48 @@
   }
   100% {
     fill: #ff00aa;
+  }
+}
+
+@keyframes colorfull-bg {
+  0% {
+    background-color: #ff1100;
+  }
+  20% {
+    background-color: #ff9900;
+  }
+  40% {
+    background-color: #0099ff;
+  }
+  60% {
+    background-color: #00b118;
+  }
+  80% {
+    background-color: #ae00ff;
+  }
+  100% {
+    background-color: #ff00aa;
+  }
+}
+
+@keyframes colorfull-color {
+  0% {
+    color: #ff1100;
+  }
+  20% {
+    color: #ff9900;
+  }
+  40% {
+    color: #0099ff;
+  }
+  60% {
+    color: #00b118;
+  }
+  80% {
+    color: #ae00ff;
+  }
+  100% {
+    color: #ff00aa;
   }
 }
 
@@ -48,7 +90,7 @@
 }
 
 .st0 {
-  fill: #ffffff;
+  animation: colorfull-fill 10s ease infinite;
 }
 
 .st1 {
@@ -56,7 +98,7 @@
 }
 
 .st2 {
-  animation: colorfull 10s ease infinite;
+  fill: #ffffff;
 }
 
 .st4 {
@@ -114,7 +156,7 @@ a {
 header {
   height: 80px;
   position: relative;
-  background: #ff6600;
+  animation: colorfull-bg 10s ease infinite;
   z-index: 20;
 }
 
@@ -162,11 +204,11 @@ header .header__inner {
 }
 
 .menu__item:hover .menu__item-link {
-  color: #ff6600;
+  animation: colorfull-color 10s ease infinite;
 }
 
 .menu__item:hover .menu-button-img rect {
-  fill: #ff6600;
+  animation: colorfull-fill 10s ease infinite;
 }
 
 .menu__item:hover .submenu {
@@ -324,7 +366,7 @@ header .header__inner {
 .filter__button {
   border: none;
   background-color: #e9e9e9;
-  color: #ff6600;
+  animation: colorfull-color 10s ease infinite;
   outline: none;
   cursor: pointer;
   border-bottom: solid 1px rgba(0, 0, 0, 0);
@@ -351,13 +393,13 @@ header .header__inner {
 #clearFiltersSvg {
   width: 15px;
   height: 15px;
-  fill: #ff6600;
+  animation: colorfull-fill 10s ease infinite;
 }
 
 #hideFiltersSvg {
   width: 20px;
   height: 20px;
-  fill: #ff6600;
+  animation: colorfull-fill 10s ease infinite;
   transition: transform .3s ease;
 }
 
@@ -395,7 +437,7 @@ header .header__inner {
   margin-left: 0.7em;
   height: 20px;
   width: 20px;
-  fill: #ff6600;
+  animation: colorfull-fill 10s ease infinite;
 }
 
 .filter-checkbox__svg {
@@ -422,7 +464,7 @@ header .header__inner {
 
 .custom-check:checked + .filter-checkbox {
   border: 1px solid #ff6600;
-  background-color: #ff6600;
+  animation: colorfull-bg 10s ease infinite;
 }
 
 .custom-check:checked + .filter-checkbox:hover {
@@ -459,22 +501,37 @@ header .header__inner {
   font-size: 12.5px;
 }
 
+.cars {
+  padding: 30px 0;
+  background-color: #f8f8f8;
+}
+
+.cards {
+  padding: 0 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 380px);
+}
+
 .card {
-  background: #ffc4c4;
-  width: 300px;
-  height: 600px;
-  position: relative;
+  width: 380px;
   cursor: pointer;
+  box-shadow: 0 0 30px #eeeeee;
+}
+
+.card__header {
+  position: relative;
 }
 
 .card__header__img {
+  object-fit: cover;
   max-width: 100%;
 }
 
 .card__header__icon {
   position: absolute;
-  top: 200px;
-  left: 0;
+  top: 230px;
+  left: 20px;
   display: flex;
 }
 
@@ -487,7 +544,7 @@ header .header__inner {
   line-height: 32px;
   border-radius: 1.5em;
   color: #ffffff;
-  background-color: #ff6600;
+  animation: colorfull-bg 10s ease infinite;
 }
 
 .card__header__icon__garant__svg {
@@ -495,6 +552,73 @@ header .header__inner {
   fill: #ffffff;
   width: 20px;
   height: 20px;
+}
+
+.card__title {
+  margin-top: 15px;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+
+.card__title__year {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 16px;
+}
+
+.card__title__region {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 16px;
+}
+
+.card__finance {
+  display: flex;
+  padding: 0 20px;
+}
+
+.card__finance__cost__title {
+  color: #6e6e6e;
+}
+
+.card__finance__cost__number {
+  margin-top: 12px;
+  font-family: 'OpenSans-Bold';
+  animation: colorfull-color 10s ease infinite;
+}
+
+.card__finance__cost__number-del {
+  color: #6e6e6e;
+  text-decoration: line-through;
+}
+
+.card__finance__credit {
+  margin-left: 70px;
+}
+
+.card__finance__credit__title {
+  color: #6e6e6e;
+}
+
+.card__finance__credit__number {
+  margin-top: 12px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-family: 'OpenSans-SemiBold';
+  color: #ffffff;
+  animation: colorfull-bg 10s ease infinite;
+}
+
+.card__footer {
+  padding: 0 20px 20px;
+}
+
+.card__footer__about {
+  color: #6e6e6e;
+  font-size: 16;
+  font-family: 'OpenSans-Light';
+}
+
+.split {
+  margin: 15px 20px;
 }
 
 .cardWrap {
@@ -508,7 +632,7 @@ header .header__inner {
 }
 
 .cardIcon {
-  fill: #ff6600;
+  animation: colorfull-fill 10s ease infinite;
   width: 20px;
   height: 20px;
 }
@@ -536,7 +660,7 @@ header .header__inner {
 }
 
 .verified__item:hover {
-  color: #ff6600;
+  animation: colorfull-color 10s ease infinite;
 }
 
 .footnote {
@@ -683,6 +807,12 @@ footer a {
 
 .footer__social__item {
   padding: 10px;
+}
+
+.footer__social__item__link__svg {
+  animation: colorfull-fill 10s ease infinite;
+  width: 40px;
+  height: 40px;
 }
 
 .footer__disclaimer {

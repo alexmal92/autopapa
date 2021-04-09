@@ -1,4 +1,4 @@
-@keyframes colorfull {
+@keyframes colorfull-fill {
   0% {
     fill: #ff1100;
   }
@@ -16,6 +16,48 @@
   }
   100% {
     fill: #ff00aa;
+  }
+}
+
+@keyframes colorfull-bg {
+  0% {
+    background-color: #ff1100;
+  }
+  20% {
+    background-color: #ff9900;
+  }
+  40% {
+    background-color: #0099ff;
+  }
+  60% {
+    background-color: #00b118;
+  }
+  80% {
+    background-color: #ae00ff;
+  }
+  100% {
+    background-color: #ff00aa;
+  }
+}
+
+@keyframes colorfull-color {
+  0% {
+    color: #ff1100;
+  }
+  20% {
+    color: #ff9900;
+  }
+  40% {
+    color: #0099ff;
+  }
+  60% {
+    color: #00b118;
+  }
+  80% {
+    color: #ae00ff;
+  }
+  100% {
+    color: #ff00aa;
   }
 }
 /*# sourceMappingURL=colors.css.map */

@@ -4,11 +4,11 @@
 //svg logo setings
 
 .st0
-  fill: $white
+  animation: colorfull-fill 10s ease infinite
 .st1
   fill: $colorMain
 .st2
-  animation: colorfull 10s ease infinite
+  fill: $white
 .st4
   fill: $grey
 
@@ -56,7 +56,7 @@ a
 header
   height: 80px
   position: relative
-  background: $colorMain
+  animation: colorfull-bg 10s ease infinite
   z-index: 20
   .header__inner
     width: 100%
@@ -93,9 +93,9 @@ header
     background-color: $white
     transition: all .2s
     .menu__item-link
-      color: $colorMain
+      animation: colorfull-color 10s ease infinite
     .menu-button-img rect
-      fill: $colorMain
+      animation: colorfull-fill 10s ease infinite
     .submenu
       background-color: $white
       visibility: visible
@@ -231,7 +231,7 @@ header
 .filter__button
   border: none
   background-color: $sectionGrey
-  color: $colorMain
+  animation: colorfull-color 10s ease infinite
   outline: none
   cursor: pointer
   border-bottom: solid 1px rgba(0,0,0,0)
@@ -249,11 +249,11 @@ header
 #clearFiltersSvg
   width: 15px
   height: 15px
-  fill: $colorMain
+  animation: colorfull-fill 10s ease infinite
 #hideFiltersSvg
   width: 20px
   height: 20px
-  fill: $colorMain
+  animation: colorfull-fill 10s ease infinite
   transition: transform .3s ease
 
   
@@ -290,7 +290,7 @@ header
     margin-left: 0.7em
     height: 20px
     width: 20px
-    fill: $colorMain
+    animation: colorfull-fill 10s ease infinite
   &__svg
     width: 14px
     height: 14px
@@ -308,7 +308,7 @@ header
     box-shadow: 0 5px 10px 0 rgba(#666666, 0.7)
   &:checked + .filter-checkbox
     border: 1px solid $colorMain
-    background-color: $colorMain
+    animation: colorfull-bg 10s ease infinite
     &:hover
       border: 1px solid $colorMain
       background-color: $colorSec
@@ -336,20 +336,27 @@ header
 
 
 //bot slider
-
+.cars
+  padding: 30px 0
+  background-color: lighten($sectionGrey, 6)
+.cards
+  padding: 0 20px
+  display: grid
+  grid-gap: 20px
+  grid-template-columns: repeat(3, 380px)
 .card
-  background: #ffc4c4
-  width: 300px
-  height: 600px
-  position: relative
+  width: 380px
   cursor: pointer
+  box-shadow: 0 0 30px lighten($sectionGrey, 2)
   &__header
+    position: relative
     &__img
+      object-fit: cover
       max-width: 100%
     &__icon
       position: absolute
-      top: 200px
-      left: 0
+      top: 230px
+      left: 20px
       display: flex
       &__garant
         padding: 0 10px
@@ -358,18 +365,60 @@ header
         align-items: center
         align-self: center
 
-
         line-height: 32px
         border-radius: 1.5em
-
         color: $white
-        background-color: $colorMain
+        animation: colorfull-bg 10s ease infinite
         &__svg
           margin-right: 15px
           fill: $white
           width: 20px
           height: 20px
-          
+  &__title
+    margin-top: 15px
+    padding: 0 20px
+    line-height: 1.5
+    &__year
+      font-family: 'OpenSans-Light', sans-serif
+      font-size: 16px
+    &__region
+      font-family: 'OpenSans-Light', sans-serif
+      font-size: 16px
+  &__finance
+    display: flex
+    padding: 0 20px
+    &__cost
+      &__title
+        color: $textGrey
+      &__number
+        margin-top: 12px
+        font-family: 'OpenSans-Bold'
+        animation: colorfull-color 10s ease infinite
+      &__number-del
+        color: $textGrey
+        text-decoration: line-through
+    &__credit
+      margin-left: 70px
+      &__title
+        color: $textGrey
+      &__number
+        margin-top: 12px
+        padding: 5px 8px
+        border-radius: 5px
+
+        font-family: 'OpenSans-SemiBold'
+        color: $white
+        animation: colorfull-bg 10s ease infinite
+  &__footer
+    padding: 0 20px 20px
+    &__about
+      color: $textGrey
+      font-size: 16
+      font-family: 'OpenSans-Light'
+
+.split
+  margin: 15px 20px
+
 
 .cardWrap
   margin: 5px
@@ -382,7 +431,7 @@ header
 
 
 .cardIcon
-  fill: $colorMain
+  animation: colorfull-fill 10s ease infinite
   width: 20px
   height: 20px
 
@@ -408,7 +457,7 @@ header
   white-space: nowrap
   color: $textGrey
   &:hover
-    color: $colorMain
+    animation: colorfull-color 10s ease infinite
 
 
 // footnotes
@@ -511,8 +560,11 @@ footer
 .footer__social
   display: flex
   &__item
-    & + &
     padding: 10px
+    &__link__svg
+      animation: colorfull-fill 10s ease infinite
+      width: 40px
+      height: 40px
 
 
 .footer__disclaimer
